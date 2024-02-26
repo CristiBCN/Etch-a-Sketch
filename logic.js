@@ -40,13 +40,27 @@ function createSquares(nr) {
       }      
     };
 
+    let bkColor = getColor();
     square.addEventListener("mouseover", function() {
-      square.style.backgroundColor = "aqua";
+      square.style.backgroundColor = bkColor;
     });
 
     square.addEventListener("mouseout", function() {
-      square.style.backgroundColor = "aqua";
+      square.style.backgroundColor = bkColor;
     });
   };
 };
+
+function getColor() {
+  let R, G, B, A;
+  R = getRandom(255);
+  G = getRandom(255);
+  B = getRandom(255);
+  A = getRandom(100);
+  return `rgba(${R} ${G} ${B} / ${A}%)`
+}
+
+function getRandom(upTo) {
+  return Math.floor(Math.random() * upTo)
+}
 
