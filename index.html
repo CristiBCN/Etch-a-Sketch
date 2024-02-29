@@ -7,9 +7,23 @@
   <title>Etch-a-Sketch</title>
 </head>
 <body>
-  <div class="comands">
+  <div class="commands">
     <button id="btn">Choose the number of squares!</button>
-    
+    <fieldset id="setUp" hidden>
+      <legend>Choose how colored to be:</legend>
+      <div>
+        <input type="checkbox" id="uniColorSquares" name="uniColorSquares" />
+        <label for="uniColorSquares">Single Colored Squares</label>
+      </div>
+      <div>
+        <input type="checkbox" id="colorSquares" name="colorSquares" />
+        <label for="colorSquares">Random Colored Squares</label>
+      </div>
+      <div>
+        <input type="checkbox" id="darkeningSquares" name="darkeningSquares" />
+        <label for="darkeningSquares">Progresiv Darkening Squares</label>
+      </div>      
+    </fieldset>
   </div>
   
   <div id="container"></div>
